@@ -1,0 +1,11 @@
+services:
+  api:
+    build: .
+    image: campus-deadline-api
+    ports:
+      - '127.0.0.1:${HOST_PORT:-3000}:3000'
+    volumes:
+      - deadlines:/app/data
+
+volumes:
+  deadlines:
